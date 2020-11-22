@@ -12,6 +12,9 @@
   <modules>
   	<module>banking-model</module>
   	<module>banking-web</module>
+  	<module>banking-db</module>
+  	<module>banking-dao</module>
+  	<module>banking-service</module>
   </modules>
   
   <dependencyManagement>
@@ -26,6 +29,26 @@
   			<artifactId>spring-boot-starter-test</artifactId>
   			<version>2.3.5.RELEASE</version>
   		</dependency>
+  		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-core</artifactId>
+		    <version>6.5.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>42.2.18</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.keycloak</groupId>
+		    <artifactId>keycloak-spring-boot-starter</artifactId>
+		    <version>7.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>2.11.3</version>
+		</dependency>
   	</dependencies>
   </dependencyManagement>
 </project>
