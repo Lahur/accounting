@@ -22,16 +22,12 @@ public class Stranka extends BaseModel {
 	@Column(name="naziv")
 	private String naziv;
 	
+	@Column(name="iban")
+	private String iban;
+	
 	@ManyToOne
 	@JoinColumn(name = "adresa_id", referencedColumnName = "id")
 	private Adresa adresa;
 	
-	@OneToMany
-	@JoinColumn(name = "stranka_id", referencedColumnName = "id")
-	private Set<Iban> ibani;
-	
-	public void addIban(Iban iban) {
-		ibani.add(iban);
-	}
 
 }
