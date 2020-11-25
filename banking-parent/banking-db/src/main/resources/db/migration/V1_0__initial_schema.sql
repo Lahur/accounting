@@ -1,3 +1,9 @@
+CREATE TABLE "korisnik"(
+	id VARCHAR(36) NOT NULL PRIMARY KEY,
+	username VARCHAR(50) NOT NULL,
+	keycloak_id VARCHAR(36) NOT NULL
+);
+
 CREATE TABLE "sifra_namjene"(
    rbr INTEGER  NOT NULL PRIMARY KEY ,
    klasifikacija VARCHAR(40) NOT NULL,
@@ -15,24 +21,21 @@ CREATE TABLE "grad"(
 CREATE TABLE "adresa"(
 	id VARCHAR(36) NOT NULL PRIMARY KEY,
 	adresa VARCHAR(100) NOT NULL,
-	grad_id VARCHAR(36),
+	grad_id VARCHAR(36) NOT NULL,
 	FOREIGN KEY(grad_id) REFERENCES grad(id)
 );
 
 CREATE TABLE "stranka"(
 	id VARCHAR(36) NOT NULL PRIMARY KEY,
 	naziv VARCHAR(100) NOT NULL,
+	iban VARCHAR(30) NOT NULL,
 	adresa_id VARCHAR(36) NOT NULL,
-	FOREIGN KEY(adresa_id) REFERENCES adresa(id)
+	korisnik_id VARCHAR(36) NOT NULL,
+	FOREIGN KEY(adresa_id) REFERENCES adresa(id),
+	FOREIGN KEY(korisnik_id) REFERENCES korisnik(id)
 );
 
-CREATE TABLE "iban"(
-	id VARCHAR(36) NOT NULL PRIMARY KEY,
-	iban VARCHAR(30) NOT NULL,
-	opis VARCHAR(150) NOT NULL,
-	stranka_id VARCHAR(36) NOT NULL,
-	FOREIGN KEY(stranka_id) REFERENCES stranka(id)
-);
+
 
 CREATE TABLE "racun"(
 	id VARCHAR(36) NOT NULL PRIMARY KEY,
