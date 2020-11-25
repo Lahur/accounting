@@ -4,17 +4,17 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import hr.java.banking.AdresaService;
 import hr.java.banking.StrankaService;
 import hr.java.banking.entities.Adresa;
-import hr.java.banking.entities.Iban;
 import hr.java.banking.entities.Stranka;
 import hr.java.banking.exceptions.BankingStatusException;
 import hr.java.banking.repository.StrankaRepository;
 
 
-
+@Service
 public class StrankaServiceImpl extends BaseServiceImpl<Stranka, StrankaRepository> implements StrankaService {
 	
 	private AdresaService adresaService;
@@ -63,28 +63,13 @@ public class StrankaServiceImpl extends BaseServiceImpl<Stranka, StrankaReposito
 
 
 	@Override
-	public Iban addIban(Iban iban, String strankaId) throws BankingStatusException {
-		Stranka stranka = null;
-		Optional<Stranka> optional = super.findOne(UUID.fromString(strankaId));
-		if(optional.isPresent())
-		{
-			stranka = optional.get();
-		}
-		else
-		{
-			throw new BankingStatusException(404, "Stranka s određenim identifikacijskim brojem ne postoji");
-		}
-		stranka.addIban(iban);
-		super.save(stranka);
-		return iban;
+	public Optional<Stranka> findByIbanAndNaziv(String iban, String naziv) {
+		return repository.findByIbanAndNaziv(iban, naziv);
 	}
 
 
 
-	@Override
-	public Optional<Stranka> findByIban(String iban) {
-		return repository.findByIbani_Iban(iban);
-	}
+
 
 
 
