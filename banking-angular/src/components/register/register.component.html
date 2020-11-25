@@ -1,0 +1,31 @@
+<form [formGroup]="registerGroup" style="margin: 0 auto; text-align: center;" (ngSubmit)="register()">
+  <h2>Registracija</h2>
+  <mat-form-field appearance="legacy" >
+    <mat-label>Ime</mat-label>
+    <input matInput formControlName="ime"/>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="legacy" >
+    <mat-label>Prezime</mat-label>
+    <input matInput formControlName="prezime"/>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="legacy" >
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email"/>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="legacy" >
+    <mat-label>Korisničko ime</mat-label>
+    <input matInput formControlName="korisnicko"/>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="legacy" >
+    <mat-label>Lozinka</mat-label>
+    <input matInput type="password" formControlName="lozinka"/>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" type="submit">Registracija</button>
+</form>
+
+

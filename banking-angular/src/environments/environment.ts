@@ -2,8 +2,20 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+
+
+import {KeycloakConfig} from 'keycloak-angular';
+
+const keycloakConfig: KeycloakConfig = {
+  url: 'http://localhost:8180/auth',
+  realm: 'accounting',
+  clientId: 'angular-app'
+};
+
 export const environment = {
-  production: false
+  production: false,
+  keycloak: keycloakConfig,
+  url: 'http://localhost:8080/api'
 };
 
 /*

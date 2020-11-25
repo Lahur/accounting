@@ -1,0 +1,24 @@
+<form [formGroup]="strankaGroup" style="margin: 0 auto; text-align: center;">
+  <h2>Nova stranka</h2>
+  <mat-form-field appearance="legacy" style="margin: 0 auto;">
+    <mat-label>Naziv</mat-label>
+    <input matInput formControlName="naziv"/>
+  </mat-form-field>
+  <mat-form-field appearance="legacy" style="margin: 0 auto;">
+    <mat-label>IBAN</mat-label>
+    <input matInput formControlName="iban"/>
+  </mat-form-field>
+  <mat-form-field appearance="legacy" style="margin: 0 auto;">
+    <mat-label>Adresa</mat-label>
+    <input matInput formControlName="adresa"/>
+  </mat-form-field>
+  <mat-form-field appearance="legacy" style="margin: 0 auto;">
+    <mat-label>Grad</mat-label>
+    <input matInput formControlName="grad"/>
+  </mat-form-field>
+  <mat-form-field appearance="legacy" style="margin: 0 auto;">
+    <mat-label>Poštanski broj</mat-label>
+    <input matInput formControlName="post"/>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="spremi()">Spremi</button>
+</form>
