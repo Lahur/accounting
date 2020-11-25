@@ -8,6 +8,6 @@ public interface StrankaRepository extends BaseRepository<Stranka> {
 	
 	Optional<Stranka> findByNaziv(String naziv);
 	
-	Optional<Stranka> findByIbani_Iban(String iban);
+	Optional<Stranka> findByIbanAndNaziv(String iban, String naziv);
 
 }
