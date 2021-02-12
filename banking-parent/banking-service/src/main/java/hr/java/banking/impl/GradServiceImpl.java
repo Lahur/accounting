@@ -29,14 +29,8 @@ public class GradServiceImpl extends BaseServiceImpl<Grad, GradRepository> imple
 	}
 
 	@Override
-	public Grad findByPost(String post) {
-		Grad grad = null;
-		Optional<Grad> optional = repository.findByPost(post);
-		if(optional.isPresent())
-		{
-			grad = optional.get();
-		}
-		return grad;
+	public Optional<Grad> findByPost(String post) {
+		return repository.findByPost(post);
 	}
 	
 

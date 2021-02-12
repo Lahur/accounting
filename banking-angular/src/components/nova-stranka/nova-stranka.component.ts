@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {MatDialogRef} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {Grad} from '../../models/grad';
 import {Adresa} from '../../models/adresa';
 import {Stranka} from '../../models/stranka';
+import {StrankaStore} from '../../stores/stranka.store';
 
 @Component({
   selector: 'app-nova-stranka',
@@ -13,7 +14,7 @@ import {Stranka} from '../../models/stranka';
 export class NovaStrankaComponent implements OnInit {
   strankaGroup: FormGroup;
 
-  constructor(private dialogRef: MatDialogRef<NovaStrankaComponent>) {
+  constructor(private strankaStore: StrankaStore, private dialogRef: MatDialogRef<NovaStrankaComponent>, @Inject( MAT_DIALOG_DATA ) public data?: string) {
     this.strankaGroup = new FormGroup({
       naziv: new FormControl(null, [Validators.required]),
       iban: new FormControl(null, [Validators.required]),
@@ -37,7 +38,20 @@ export class NovaStrankaComponent implements OnInit {
     stranka.naziv = this.strankaGroup.get('naziv').value;
     stranka.iban = this.strankaGroup.get('iban').value;
     stranka.adresa = adresa;
+    if (this.data === 'racun')
+    {
+      this.dialogRef.close(stranka);
+    }
+    if (this.data === 'moja-stranka')
+    {
+      this.strankaStore.saveMyStranka(stranka);
+      this.dialogRef.close();
+    }
+    if (this.data === 'stranka')
+    {
+      this.strankaStore.save(stranka);
+      this.dialogRef.close();
+    }
 
-    this.dialogRef.close(stranka);
   }
 }

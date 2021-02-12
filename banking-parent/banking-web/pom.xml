@@ -51,6 +51,18 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-security</artifactId>
 	</dependency>
+	<dependency>
+	    <groupId>org.codehaus.groovy</groupId>
+	    <artifactId>groovy-all</artifactId>
+	    <type>pom</type>
+	    <exclusions>
+        <exclusion>
+            <artifactId>tools</artifactId>
+            <groupId>com.sun</groupId>
+        </exclusion>
+    </exclusions> 
+	</dependency>
+	
 	</dependencies>
 
 	<build>
@@ -58,6 +70,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
 			</plugin>
 		</plugins>
 	</build>

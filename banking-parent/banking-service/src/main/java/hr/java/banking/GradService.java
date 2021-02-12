@@ -1,9 +1,11 @@
 package hr.java.banking;
 
+import java.util.Optional;
+
 import hr.java.banking.entities.Grad;
 
 public interface GradService extends BaseService<Grad> {
 	
-	Grad findByPost(String post);
+	Optional<Grad> findByPost(String post);
 
 }

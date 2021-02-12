@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {RegisterComponent} from '../register/register.component';
 import {KorisnikService} from '../../services/korisnik.service';
-import {KeycloakService} from 'keycloak-angular';
 import {Router} from '@angular/router';
+import {OAuthService} from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +12,18 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private keycloakService: KeycloakService, private router: Router) {}
+  constructor(public dialog: MatDialog, private oauthService: OAuthService) {}
 
   ngOnInit(): void {
   }
 
   openRegister(): void {
-    let dialog = this.dialog.open(RegisterComponent, {
+    const dialog = this.dialog.open(RegisterComponent, {
       width: '500px'
     });
   }
 
   login(): void {
-    console.log('a');
-    this.keycloakService.login().then(() => {
-    });
+    this.oauthService.initImplicitFlow();
   }
 }

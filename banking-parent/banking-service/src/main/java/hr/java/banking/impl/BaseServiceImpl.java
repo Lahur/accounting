@@ -14,10 +14,10 @@ import hr.java.banking.repository.BaseRepository;
 @Service
 public abstract class BaseServiceImpl<T extends BaseModel, R extends BaseRepository<T>> implements BaseService<T> {
 	
-	@Autowired
+	
 	R repository;
 	
-	@Autowired
+	
 	public BaseServiceImpl(R repository) {
 		this.repository = repository;
 	}

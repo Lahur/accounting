@@ -1,0 +1,65 @@
+<mat-dialog-content>
+  <table style="width: 100%; text-align: center">
+    <tr>
+      <td colspan="2"><div class="naslov"><b>Uplatitelj</b></div></td>
+    </tr>
+    <tr>
+      <td style="width: 50%">Naziv</td>
+      <td>{{data.uplatitelj.naziv}}</td>
+    </tr>
+    <tr>
+      <td>Adresa</td>
+      <td>{{data.uplatitelj.adresa.adresa}}</td>
+    </tr>
+    <tr>
+      <td>Grad</td>
+      <td>{{data.uplatitelj.adresa.grad.post}} {{data.uplatitelj.adresa.grad.naziv}}</td>
+    </tr>
+    <tr>
+      <td colspan="2"><div class="naslov"><b>Primatelj</b></div></td>
+    </tr>
+    <tr>
+      <td style="width: 50%">Naziv</td>
+      <td>{{data.primatelj.naziv}}</td>
+    </tr>
+    <tr>
+      <td>Adresa</td>
+      <td>{{data.primatelj.adresa.adresa}}</td>
+    </tr>
+    <tr>
+      <td>Grad</td>
+      <td>{{data.primatelj.adresa.grad.post}} {{data.primatelj.adresa.grad.naziv}}</td>
+    </tr>
+    <tr>
+      <td colspan="2"><div class="naslov"><b>Podaci o plačanju</b></div></td>
+    </tr>
+    <tr>
+      <td>Iznos</td>
+      <td>{{data.iznos}}</td>
+    </tr>
+    <tr>
+      <td>Valuta</td>
+      <td>{{data.valuta}}</td>
+    </tr>
+    <tr>
+      <td>Šifra namjene</td>
+      <td>{{data.sifraNamjene.sifra}}</td>
+    </tr>
+    <tr>
+      <td>Opis</td>
+      <td>{{data.opis}}</td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td>{{data.model}}</td>
+    </tr>
+    <tr>
+      <td>Poziv na broj</td>
+      <td>{{data.pozivNaBroj}}</td>
+    </tr>
+    <tr>
+      <td>IBAN</td>
+      <td>{{data.primatelj.iban}}</td>
+    </tr>
+  </table>
+</mat-dialog-content>

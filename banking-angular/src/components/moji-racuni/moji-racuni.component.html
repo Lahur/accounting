@@ -1,0 +1,34 @@
+<div style="width: 100%; background-color: white;">
+  <button style="float: right; margin: 10px 10px;" mat-raised-button color="primary" (click)="new()"><mat-icon>add</mat-icon></button>
+  <div style="clear: both;"></div>
+</div>
+<table mat-table [dataSource]="racuni | async" style="width: 100%">
+  <ng-container matColumnDef="primatelj">
+    <th mat-header-cell *matHeaderCellDef> Primatelj </th>
+    <td mat-cell *matCellDef="let rac"> {{rac.primatelj.naziv}} </td>
+  </ng-container>
+  <ng-container matColumnDef="uplatitelj">
+    <th mat-header-cell *matHeaderCellDef> Uplatitelj </th>
+    <td mat-cell *matCellDef="let rac"> {{rac.uplatitelj.naziv}} </td>
+  </ng-container>
+  <ng-container matColumnDef="sifra">
+    <th mat-header-cell *matHeaderCellDef> Šifra namjene </th>
+    <td mat-cell *matCellDef="let rac"> {{rac.sifraNamjene.sifra}} </td>
+  </ng-container>
+  <ng-container matColumnDef="svota">
+    <th mat-header-cell *matHeaderCellDef> Svota </th>
+    <td mat-cell *matCellDef="let rac"> {{rac.iznos | svota}} </td>
+  </ng-container>
+  <ng-container matColumnDef="pdf">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let rac"> <button style="float: right; margin: 10px 10px;" mat-raised-button color="primary" (click)=" $event.preventDefault(); $event.stopPropagation(); createPdf(rac.id)"><mat-icon>print</mat-icon></button> </td>
+  </ng-container>
+  <ng-container matColumnDef="brisanje">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let rac"> <button style="float: right; margin: 10px 10px;" mat-raised-button color="warn" (click)=" $event.preventDefault(); $event.stopPropagation();delete(rac.id)"><mat-icon>remove_circle</mat-icon></button> </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="detalji(row)"></tr>
+
+</table>

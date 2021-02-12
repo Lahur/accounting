@@ -42,7 +42,7 @@ public class KorisnikServiceImpl extends BaseServiceImpl<Korisnik, KorisnikRepos
 
 	@Override
 	public Optional<Korisnik> findByKeycloakId(String id) {
-		return repository.findByKeycloakId(id);
+		return repository.findAllByKeycloakId(id);
 	}
 
 	@Override

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {Stranka} from '../../models/stranka';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {NovaStrankaComponent} from '../nova-stranka/nova-stranka.component';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {SifraNamjene} from '../../models/sifraNamjene';
 import {SifraComponent} from '../sifra/sifra.component';
 import {Racun} from '../../models/racun';
 import {RacunStore} from '../../stores/racun.store';
+import {FindStrankaComponent} from '../find-stranka/find-stranka.component';
 
 @Component({
   selector: 'app-novi-racun',
@@ -20,7 +21,7 @@ export class NoviRacunComponent implements OnInit {
   sifra: SifraNamjene = null;
   racunGroup: FormGroup;
 
-  constructor(private dialog: MatDialog, private dialogRef: MatDialogRef<NoviRacunComponent>, private racunStore: RacunStore) {
+  constructor(private dialog: MatDialog, private dialogRef: MatDialogRef<NoviRacunComponent>, private racunStore: RacunStore, @Inject( MAT_DIALOG_DATA ) public data?: string) {
     this.racunGroup = new FormGroup({
       valuta: new FormControl(null, [Validators.required]),
       iznos: new FormControl(null, [Validators.required]),
@@ -35,7 +36,8 @@ export class NoviRacunComponent implements OnInit {
 
   add(vrsta: string): void {
     const dialog = this.dialog.open(NovaStrankaComponent, {
-      width: '300px'
+      width: '300px',
+      data: 'racun'
     });
     dialog.afterClosed().subscribe(res => {
       if (res)
@@ -65,10 +67,61 @@ export class NoviRacunComponent implements OnInit {
     });
   }
 
+  findPrimatelj(): void {
+    let d = '';
+    if (this.data === 'ingoing')
+    {
+      d = 'primatelj';
+    }
+    if (this.data === 'outgoing')
+    {
+      d = 'uplatitelj';
+    }
+    const dialog = this.dialog.open(FindStrankaComponent, {
+      width: '1200px',
+      height: '700px',
+      data: d
+    });
+    dialog.afterClosed().subscribe(res => {
+      if (res)
+      {
+
+          this.primatelj = res;
+
+
+      }
+    });
+  }
+
+  findUplatitelj(): void {
+    let d = '';
+    if (this.data === 'outgoing')
+    {
+      d = 'primatelj';
+    }
+    if (this.data === 'ingoing')
+    {
+      d = 'uplatitelj';
+    }
+    const dialog = this.dialog.open(FindStrankaComponent, {
+      width: '1200px',
+      height: '700px',
+      data: d
+    });
+    dialog.afterClosed().subscribe(res => {
+      if (res)
+      {
+
+          this.uplatitelj = res;
+
+      }
+    });
+  }
+
   spremi(): void {
     const izn = +this.racunGroup.get('iznos').value;
-    let iznos = izn.toFixed(0);
-    iznos = this.nule.substr(0, iznos.length) + iznos;
+    let iznos = (izn * 100).toFixed(0);
+    iznos = this.nule.substr(0, this.nule.length - iznos.length) + iznos;
     const racun = new Racun();
     racun.uplatnica = 'HRVHUB30';
     racun.valuta = this.racunGroup.get('valuta').value;
@@ -81,9 +134,18 @@ export class NoviRacunComponent implements OnInit {
     racun.opis = this.racunGroup.get('opis').value;
     racun.sifraNamjene = this.sifra;
 
-    this.racunStore.save(racun).subscribe(() => {
-      this.dialogRef.close();
-    })
+    if(this.data === 'ingoing')
+    {
+      this.racunStore.saveIngoing(racun).subscribe(() => {
+        this.dialogRef.close();
+      });
+    }
+    if(this.data === 'outgoing')
+    {
+      this.racunStore.saveOutgoing(racun).subscribe(() => {
+        this.dialogRef.close();
+      });
+    }
 
   }
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6a3fd71-2aca-47d5-b65b-ac0dd84c3f4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/banking-angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/nova-stranka/nova-stranka.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/nova-stranka/nova-stranka.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/novi-racun/novi-racun.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/novi-racun/novi-racun.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/novi-racun/novi-racun.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/novi-racun/novi-racun.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/components/racuni/racuni.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/services/racun.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/services/racun.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/services/stranka.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/services/stranka.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/stores/racun.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/stores/racun.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-angular/src/stores/stranka.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/banking-angular/src/stores/stranka.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/AdresaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/AdresaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/KorisnikRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/KorisnikRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/RacunRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/RacunRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/StrankaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-dao/src/main/java/hr/java/banking/repository/StrankaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-db/src/main/resources/db/migration/V1_0__initial_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-db/src/main/resources/db/migration/V1_0__initial_schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/.project" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/src/main/java/hr/java/banking/entities/BaseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/src/main/java/hr/java/banking/entities/BaseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-model/src/main/java/hr/java/banking/entities/Stranka.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-model/src/main/java/hr/java/banking/entities/Stranka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/AdresaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/AdresaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/GradService.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/GradService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/RacunService.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/RacunService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/StrankaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/StrankaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/AdresaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/AdresaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/BaseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/BaseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/GradServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/GradServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/KorisnikServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/KorisnikServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/RacunServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/RacunServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/StrankaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-service/src/main/java/hr/java/banking/impl/StrankaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-web/src/main/java/hr/java/banking/config/SimpleCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-web/src/main/java/hr/java/banking/config/SimpleCORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-web/src/main/java/hr/java/banking/controller/RacunController.java" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-web/src/main/java/hr/java/banking/controller/RacunController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/banking-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/banking-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banking-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/banking-parent/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1n41YsJWMuGl3qE1AMUiVlgQSzA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/banking-ionic" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6a3fd71-2aca-47d5-b65b-ac0dd84c3f4f" name="Default Changelist" comment="" />
+      <created>1610634599930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610634599930</updated>
+      <workItem from="1610634602345" duration="10000" />
+    </task>
+    <servers />
+  </component>
+</project>

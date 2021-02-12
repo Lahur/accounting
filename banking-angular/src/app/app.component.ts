@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {NavigationStart, Router} from '@angular/router';
 import {GeolocationService} from '@ng-web-apis/geolocation';
-import {KeycloakService} from 'keycloak-angular';
+import {OAuthService} from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +12,14 @@ export class AppComponent {
   opened = false;
 
   pages = [
-    {icon: 'request_page', name: 'Računi', route: 'racuni'}
+    {icon: 'request_page', name: 'Računi', route: 'racuni'},
+    {icon: 'insert_drive_file', name: 'Moji računi', route: 'moji-racuni'},
+    {icon: 'find_in_page', name: 'Stranke', route: 'stranke'},
+    {icon: 'contact_page', name: 'Moje stranke', route: 'moje-stranke'},
   ];
   isLogin = false;
 
-  constructor(private router: Router, private keycloakService: KeycloakService) {
+  constructor(private router: Router, private oauthService: OAuthService) {
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
         if (event.url.includes('login')) {
@@ -35,6 +38,6 @@ export class AppComponent {
   }
 
   logout(): void {
-    this.keycloakService.logout(window.location.origin + '/login');
+    this.oauthService.logOut();
   }
 }

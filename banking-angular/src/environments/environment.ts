@@ -4,18 +4,24 @@
 
 
 
-import {KeycloakConfig} from 'keycloak-angular';
 
-const keycloakConfig: KeycloakConfig = {
-  url: 'http://localhost:8180/auth',
+
+const keycloakConfig = {
+  url: 'http://192.168.1.6:8180/auth',
   realm: 'accounting',
-  clientId: 'angular-app'
+  clientId: 'angular-app',
+  redirectUri: window.location.origin,
+  responseType: 'code',
+  scope: 'openid profile email',
+  requireHttps: false,
+  showDebugInformation: true,
+  disableAtHashCheck: true
 };
 
 export const environment = {
   production: false,
   keycloak: keycloakConfig,
-  url: 'http://localhost:8080/api'
+  url: 'http://192.168.1.6:8080/api'
 };
 
 /*

@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Skeniranje računa
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <div style="width: 100%; text-align: center;">
+    <ion-button style="width: 90%; margin: 10px auto;" (click)="scanQr()"><ion-icon name="qr-code-outline"></ion-icon> Skeniraj kod</ion-button>
+    </div>
+    <form [formGroup]="racunGroup" style="width: 90%; margin: 10px auto;" (ngSubmit)="spremi()">
+      <h2>Uplatitelj</h2>
+      <ion-item>
+        <ion-label position="floating">Naziv</ion-label>
+        <ion-input formControlName="uplatiteljNaziv"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Adresa</ion-label>
+        <ion-input formControlName="uplatiteljAdresa"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Grad</ion-label>
+        <ion-input formControlName="uplatiteljGrad"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Poštanski broj</ion-label>
+        <ion-input formControlName="uplatiteljPost"></ion-input>
+      </ion-item>
+      <h2>Primatelj</h2>
+      <ion-item>
+        <ion-label position="floating">Naziv</ion-label>
+        <ion-input formControlName="primateljNaziv"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Adresa</ion-label>
+        <ion-input formControlName="primateljAdresa"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Grad</ion-label>
+        <ion-input formControlName="primateljGrad"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Poštanski broj</ion-label>
+        <ion-input formControlName="primateljPost"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">IBAN</ion-label>
+        <ion-input formControlName="primateljIban"></ion-input>
+      </ion-item>
+      <h2>Podaci o plačanju</h2>
+      <ion-item>
+        <ion-label position="floating">Valuta</ion-label>
+        <ion-input formControlName="valuta"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Iznos</ion-label>
+        <ion-input formControlName="iznos"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Model</ion-label>
+        <ion-input formControlName="model"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Poziv na broj</ion-label>
+        <ion-input formControlName="poziv"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Šifra namjene</ion-label>
+        <ion-input formControlName="sifra"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Opis</ion-label>
+        <ion-input formControlName="opis"></ion-input>
+      </ion-item>
+      <div style="width: 100%; text-align: center;">
+        <ion-button style="width: 90%; margin: 10px auto;" type="submit">Spremi</ion-button>
+      </div>
+    </form>
+  </ion-card>
+</ion-content>

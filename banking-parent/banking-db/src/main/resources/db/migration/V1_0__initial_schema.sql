@@ -30,7 +30,7 @@ CREATE TABLE "stranka"(
 	naziv VARCHAR(100) NOT NULL,
 	iban VARCHAR(30) NOT NULL,
 	adresa_id VARCHAR(36) NOT NULL,
-	korisnik_id VARCHAR(36) NOT NULL,
+	korisnik_id VARCHAR(36),
 	FOREIGN KEY(adresa_id) REFERENCES adresa(id),
 	FOREIGN KEY(korisnik_id) REFERENCES korisnik(id)
 );
